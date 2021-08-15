@@ -19,6 +19,7 @@ import {
     getNeckImgSrcByIndex,
     getHeadImgSrcByIndex,
     getEarsImgSrcByIndex,
+    getAccessoryImgSrcByIndex,
 } from '../utils/imageUtils';
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -60,6 +61,7 @@ export const HomePage = (): JSX.Element => {
     const robotNeck = new Image();
     const robotEars = new Image();
     const robotHead = new Image();
+    const robotAccessory = new Image();
 
     useEffect((): void => {
         generateRandoBot();
@@ -76,6 +78,7 @@ export const HomePage = (): JSX.Element => {
             ctx.drawImage(robotNeck, 0, 0);
             ctx.drawImage(robotEars, 0, 0);
             ctx.drawImage(robotHead, 0, 0);
+            ctx.drawImage(robotAccessory, 0, 0);
         }
     };
 
@@ -84,18 +87,27 @@ export const HomePage = (): JSX.Element => {
         let robotNeckLoaded = false;
         let robotEarsLoaded = false;
         let robotHeadLoaded = false;
+        let robotAccessoryLoaded = false;
 
         const robotBackgroundIndex = Math.floor(Math.random() * 8);
         const robotNeckIndex = Math.floor(Math.random() * 8);
         const robotEarsIndex = Math.floor(Math.random() * 16);
         const robotHeadIndex = Math.floor(Math.random() * 16);
+        const robotAccessoryIndex = Math.floor(Math.random() * 16);
         robotBackground.src = getBackgroundImgSrcByIndex(robotBackgroundIndex);
         robotNeck.src = getNeckImgSrcByIndex(robotNeckIndex);
         robotEars.src = getEarsImgSrcByIndex(robotEarsIndex);
         robotHead.src = getHeadImgSrcByIndex(robotHeadIndex);
+        robotAccessory.src = getAccessoryImgSrcByIndex(robotAccessoryIndex);
 
         const checkIfAllAssetsLoaded = (): void => {
-            if (robotBackgroundLoaded && robotNeckLoaded && robotEarsLoaded && robotHeadLoaded) {
+            if (
+                robotBackgroundLoaded &&
+                robotNeckLoaded &&
+                robotEarsLoaded &&
+                robotHeadLoaded &&
+                robotAccessoryLoaded
+            ) {
                 drawRandoBot();
             }
         };
@@ -117,6 +129,11 @@ export const HomePage = (): JSX.Element => {
 
         robotHead.onload = function () {
             robotHeadLoaded = true;
+            checkIfAllAssetsLoaded();
+        };
+
+        robotAccessory.onload = function () {
+            robotAccessoryLoaded = true;
             checkIfAllAssetsLoaded();
         };
     };

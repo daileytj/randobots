@@ -50,6 +50,23 @@ import head_13 from '../assets/images/heads/head_13.png';
 import head_14 from '../assets/images/heads/head_14.png';
 import head_15 from '../assets/images/heads/head_15.png';
 
+import accessory_0 from '../assets/images/accessories/accessory_0.png';
+import accessory_1 from '../assets/images/accessories/accessory_1.png';
+import accessory_2 from '../assets/images/accessories/accessory_2.png';
+import accessory_3 from '../assets/images/accessories/accessory_3.png';
+import accessory_4 from '../assets/images/accessories/accessory_4.png';
+import accessory_5 from '../assets/images/accessories/accessory_5.png';
+import accessory_6 from '../assets/images/accessories/accessory_6.png';
+import accessory_7 from '../assets/images/accessories/accessory_7.png';
+import accessory_8 from '../assets/images/accessories/accessory_8.png';
+import accessory_9 from '../assets/images/accessories/accessory_9.png';
+import accessory_10 from '../assets/images/accessories/accessory_10.png';
+import accessory_11 from '../assets/images/accessories/accessory_11.png';
+import accessory_12 from '../assets/images/accessories/accessory_12.png';
+import accessory_13 from '../assets/images/accessories/accessory_13.png';
+import accessory_14 from '../assets/images/accessories/accessory_14.png';
+import accessory_15 from '../assets/images/accessories/accessory_15.png';
+
 export const getBackgroundImgSrcByIndex = (index: number): string => {
     let imageSrc: string;
     switch (index) {
@@ -224,6 +241,63 @@ export const getHeadImgSrcByIndex = (index: number): string => {
         case 0:
         default:
             imageSrc = head_0;
+            break;
+    }
+
+    return imageSrc;
+};
+
+export const getAccessoryImgSrcByIndex = (index: number): string => {
+    let imageSrc: string;
+    switch (index) {
+        case 15:
+            imageSrc = accessory_15;
+            break;
+        case 14:
+            imageSrc = accessory_14;
+            break;
+        case 13:
+            imageSrc = accessory_13;
+            break;
+        case 12:
+            imageSrc = accessory_12;
+            break;
+        case 11:
+            imageSrc = accessory_11;
+            break;
+        case 10:
+            imageSrc = accessory_10;
+            break;
+        case 9:
+            imageSrc = accessory_9;
+            break;
+        case 8:
+            imageSrc = accessory_8;
+            break;
+        case 7:
+            imageSrc = accessory_7;
+            break;
+        case 6:
+            imageSrc = accessory_6;
+            break;
+        case 5:
+            imageSrc = accessory_5;
+            break;
+        case 4:
+            imageSrc = accessory_4;
+            break;
+        case 3:
+            imageSrc = accessory_3;
+            break;
+        case 2:
+            imageSrc = accessory_2;
+            break;
+        case 1:
+            imageSrc = accessory_1;
+            break;
+        case 0:
+        default:
+            imageSrc = accessory_0;
             break;
     }
 
