@@ -1,9 +1,6 @@
 import React from 'react';
 import {
     AppBar,
-    Button,
-    Divider,
-    Grid,
     Hidden,
     IconButton,
     Theme,
@@ -11,12 +8,13 @@ import {
     Typography,
     createStyles,
     makeStyles,
-    useMediaQuery,
+    /*useMediaQuery,*/
     useTheme,
+    Button,
 } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
-import { PXBlueSVG } from '../components/Logo';
 import { useDrawer } from '../contexts/drawerContextProvider';
+import { useHistory } from 'react-router';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -39,18 +37,6 @@ const useStyles = makeStyles((theme: Theme) =>
             paddingLeft: theme.spacing(2),
             paddingRight: theme.spacing(2),
         },
-        divider: {
-            marginTop: theme.spacing(3),
-            marginBottom: theme.spacing(3),
-        },
-        rotate: {
-            animation: '2500ms $spin linear infinite',
-        },
-        '@keyframes spin': {
-            '100%': {
-                transform: 'rotate(360deg)',
-            },
-        },
     })
 );
 
@@ -58,11 +44,12 @@ export const HomePage = (): JSX.Element => {
     const theme = useTheme();
     const classes = useStyles(theme);
     const { setDrawerOpen } = useDrawer();
-    const xs = useMediaQuery(theme.breakpoints.down('xs'));
+    const history = useHistory();
+    // const xs = useMediaQuery(theme.breakpoints.down('xs'));
 
     return (
         <div className={classes.pageBackground}>
-            <AppBar position={'sticky'}>
+            <AppBar position={'sticky'} color={'secondary'}>
                 <Toolbar className={classes.toolbar}>
                     <Hidden mdUp={true}>
                         <IconButton
@@ -77,77 +64,27 @@ export const HomePage = (): JSX.Element => {
                         </IconButton>
                     </Hidden>
                     <Typography variant={'h6'} color={'inherit'}>
-                        Home Page
+                        RandoBots
                     </Typography>
                 </Toolbar>
             </AppBar>
             <div className={classes.body}>
-                <div style={{ maxWidth: 600, margin: '0 auto' }}>
-                    <div style={{ textAlign: 'center' }}>
-                        <PXBlueSVG
-                            className={classes.rotate}
-                            size={xs ? 100 : 160}
-                            color={theme.palette.primary.main}
-                        />
-                        <Typography variant={xs ? 'h4' : 'h2'} paragraph>
-                            Welcome to PX{' '}
-                            <Typography variant={'inherit'} color={'primary'}>
-                                Blue
-                            </Typography>
-                            .
-                        </Typography>
-                        <Typography variant={'body1'}>
-                            Edit <strong>src/pages/home.tsx</strong> and save to reload.
-                        </Typography>
-                    </div>
-                    <Hidden xsDown>
-                        <Divider className={classes.divider} />
-                        <Grid container spacing={2}>
-                            <Grid item xs={12} sm={6}>
-                                <Button target={'_blank'} href={'https://pxblue.github.io/'}>
-                                    PX Blue Documentation
-                                </Button>
-                            </Grid>
-                            <Grid item xs={12} sm={6}>
-                                <Button
-                                    target={'_blank'}
-                                    href={'https://pxblue.github.io/development/frameworks-web/react'}
-                                >
-                                    React Getting Started Guide
-                                </Button>
-                            </Grid>
-                            <Grid item xs={12} sm={6}>
-                                <Button target={'_blank'} href={'https://pxblue.github.io/patterns'}>
-                                    Design Pattern Descriptions
-                                </Button>
-                            </Grid>
-                            <Grid item xs={12} sm={6}>
-                                <Button target={'_blank'} href={'https://pxblue-components.github.io/react/'}>
-                                    PX Blue React Component Library
-                                </Button>
-                            </Grid>
-                            <Grid item xs={12} sm={6}>
-                                <Button target={'_blank'} href={'https://github.com/pxblue'}>
-                                    Visit Us on GitHub
-                                </Button>
-                            </Grid>
-                            <Grid item xs={12} sm={6}>
-                                <Button target={'_blank'} href={'https://github.com/pxblue/react-design-patterns'}>
-                                    Design Pattern Source on GitHub
-                                </Button>
-                            </Grid>
-                            <Grid item xs={12} sm={6}>
-                                <Button target={'_blank'} href={'https://pxblue.github.io/roadmap'}>
-                                    Release Roadmap
-                                </Button>
-                            </Grid>
-                            <Grid item xs={12} sm={6}>
-                                <Button target={'_blank'} href={'https://pxblue.github.io/community/contactus'}>
-                                    Send Feedback or Suggestions
-                                </Button>
-                            </Grid>
-                        </Grid>
-                    </Hidden>
+                <div style={{ maxWidth: 600, margin: '0 auto', display: 'flex', flexDirection: 'column' }}>
+                    <Typography variant={'h3'}>Welcome to RandoBots!</Typography>
+                    <Typography variant={'body1'}>
+                        This is a placeholder home page that I'll eventually populate, but for now just go check out the
+                        RandoBot Generator!
+                    </Typography>
+                    <Button
+                        variant={'contained'}
+                        color={'primary'}
+                        style={{ marginTop: 16 }}
+                        onClick={(): void => {
+                            history.push('/rando-bot-generator');
+                        }}
+                    >
+                        Go To RandoBot Generator
+                    </Button>
                 </div>
             </div>
         </div>
