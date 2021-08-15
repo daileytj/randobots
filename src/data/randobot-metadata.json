@@ -1,0 +1,218 @@
+[
+    {
+        "backgrounds": [
+            {
+                "id": "background_0",
+                "color": "white"
+            },
+            {
+                "id": "background_1",
+                "color": "black"
+            },
+            {
+                "id": "background_2",
+                "color": "blue"
+            },
+            {
+                "id": "background_3",
+                "color": "red"
+            },
+            {
+                "id": "background_4",
+                "color": "orange"
+            },
+            {
+                "id": "background_5",
+                "color": "yellow"
+            },
+            {
+                "id": "background_6",
+                "color": "green"
+            },
+            {
+                "id": "background_7",
+                "color": "purple"
+            }
+        ],
+        "necks": [
+            {
+                "id": "neck_0",
+                "width": "narrow",
+                "color": "white",
+                "accessory": "none"
+            },
+            {
+                "id": "neck_1",
+                "width": "narrow",
+                "color": "black",
+                "accessory": "none"
+            },
+            {
+                "id": "neck_2",
+                "width": "narrow",
+                "color": "blue",
+                "accessory": "none"
+            },
+            {
+                "id": "neck_3",
+                "width": "narrow",
+                "color": "red",
+                "accessory": "none"
+            },
+            {
+                "id": "neck_4",
+                "width": "narrow",
+                "color": "orange",
+                "accessory": "none"
+            },
+            {
+                "id": "neck_5",
+                "width": "narrow",
+                "color": "yellow",
+                "accessory": "none"
+            },
+            {
+                "id": "neck_6",
+                "width": "narrow",
+                "color": "green",
+                "accessory": "none"
+            },
+            {
+                "id": "neck_7",
+                "width": "narrow",
+                "color": "purple",
+                "accessory": "none"
+            },
+            {
+                "id": "neck_8",
+                "width": "wide",
+                "color": "white",
+                "accessory": "none"
+            },
+            {
+                "id": "neck_9",
+                "width": "wide",
+                "color": "black",
+                "accessory": "none"
+            },
+            {
+                "id": "neck_10",
+                "width": "wide",
+                "color": "blue",
+                "accessory": "none"
+            },
+            {
+                "id": "neck_11",
+                "width": "wide",
+                "color": "red",
+                "accessory": "none"
+            },
+            {
+                "id": "neck_12",
+                "width": "wide",
+                "color": "orange",
+                "accessory": "none"
+            },
+            {
+                "id": "neck_13",
+                "width": "wide",
+                "color": "yellow",
+                "accessory": "none"
+            },
+            {
+                "id": "neck_14",
+                "width": "wide",
+                "color": "green",
+                "accessory": "none"
+            },
+            {
+                "id": "neck_15",
+                "width": "wide",
+                "color": "purple",
+                "accessory": "none"
+            }
+        ],
+        "heads": [
+            {
+                "id": "head_0",
+                "shape": "rectangle",
+                "color": "white"
+            },
+            {
+                "id": "head_1",
+                "shape": "rectangle",
+                "color": "black"
+            },
+            {
+                "id": "head_2",
+                "shape": "rectangle",
+                "color": "blue"
+            },
+            {
+                "id": "head_3",
+                "shape": "rectangle",
+                "color": "red"
+            },
+            {
+                "id": "head_4",
+                "shape": "rectangle",
+                "color": "orange"
+            },
+            {
+                "id": "head_5",
+                "shape": "rectangle",
+                "color": "yellow"
+            },
+            {
+                "id": "head_6",
+                "shape": "rectangle",
+                "color": "green"
+            },
+            {
+                "id": "head_7",
+                "shape": "rectangle",
+                "color": "purple"
+            },
+            {
+                "id": "head_8",
+                "shape": "round",
+                "color": "white"
+            },
+            {
+                "id": "head_9",
+                "shape": "round",
+                "color": "black"
+            },
+            {
+                "id": "head_10",
+                "shape": "round",
+                "color": "blue"
+            },
+            {
+                "id": "head_11",
+                "shape": "round",
+                "color": "red"
+            },
+            {
+                "id": "head_12",
+                "shape": "round",
+                "color": "orange"
+            },
+            {
+                "id": "head_13",
+                "shape": "round",
+                "color": "yellow"
+            },
+            {
+                "id": "head_14",
+                "shape": "round",
+                "color": "green"
+            },
+            {
+                "id": "head_15",
+                "shape": "round",
+                "color": "purple"
+            }
+        ]
+    }
+]
