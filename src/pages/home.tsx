@@ -14,9 +14,12 @@ import {
 } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import { useDrawer } from '../contexts/drawerContextProvider';
-import { getBackgroundImgSrcByIndex } from '../assets/images/backgrounds';
-import { getNeckImgSrcByIndex } from '../assets/images/necks';
-import { getHeadImgSrcByIndex } from '../assets/images/heads';
+import {
+    getBackgroundImgSrcByIndex,
+    getNeckImgSrcByIndex,
+    getHeadImgSrcByIndex,
+    getEarsImgSrcByIndex,
+} from '../utils/imageUtils';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -55,6 +58,7 @@ export const HomePage = (): JSX.Element => {
     // const xs = useMediaQuery(theme.breakpoints.down('xs'));
     const robotBackground = new Image();
     const robotNeck = new Image();
+    const robotEars = new Image();
     const robotHead = new Image();
 
     useEffect((): void => {
@@ -70,6 +74,7 @@ export const HomePage = (): JSX.Element => {
         if (ctx) {
             ctx.drawImage(robotBackground, 0, 0);
             ctx.drawImage(robotNeck, 0, 0);
+            ctx.drawImage(robotEars, 0, 0);
             ctx.drawImage(robotHead, 0, 0);
         }
     };
@@ -77,17 +82,20 @@ export const HomePage = (): JSX.Element => {
     const generateRandoBot = (): any => {
         let robotBackgroundLoaded = false;
         let robotNeckLoaded = false;
+        let robotEarsLoaded = false;
         let robotHeadLoaded = false;
 
         const robotBackgroundIndex = Math.floor(Math.random() * 8);
-        const robotNeckIndex = Math.floor(Math.random() * 16);
+        const robotNeckIndex = Math.floor(Math.random() * 8);
+        const robotEarsIndex = Math.floor(Math.random() * 16);
         const robotHeadIndex = Math.floor(Math.random() * 16);
         robotBackground.src = getBackgroundImgSrcByIndex(robotBackgroundIndex);
         robotNeck.src = getNeckImgSrcByIndex(robotNeckIndex);
+        robotEars.src = getEarsImgSrcByIndex(robotEarsIndex);
         robotHead.src = getHeadImgSrcByIndex(robotHeadIndex);
 
         const checkIfAllAssetsLoaded = (): void => {
-            if (robotBackgroundLoaded && robotNeckLoaded && robotHeadLoaded) {
+            if (robotBackgroundLoaded && robotNeckLoaded && robotEarsLoaded && robotHeadLoaded) {
                 drawRandoBot();
             }
         };
@@ -99,6 +107,11 @@ export const HomePage = (): JSX.Element => {
 
         robotNeck.onload = function () {
             robotNeckLoaded = true;
+            checkIfAllAssetsLoaded();
+        };
+
+        robotEars.onload = function () {
+            robotEarsLoaded = true;
             checkIfAllAssetsLoaded();
         };
 
