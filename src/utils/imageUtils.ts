@@ -100,6 +100,30 @@ import eyes_12 from '../assets/images/eyes/eyes_12.png';
 import eyes_13 from '../assets/images/eyes/eyes_13.png';
 import eyes_14 from '../assets/images/eyes/eyes_14.png';
 import eyes_15 from '../assets/images/eyes/eyes_15.png';
+import eyes_16 from '../assets/images/eyes/eyes_16.png';
+import eyes_17 from '../assets/images/eyes/eyes_17.png';
+import eyes_18 from '../assets/images/eyes/eyes_18.png';
+import eyes_19 from '../assets/images/eyes/eyes_19.png';
+import eyes_20 from '../assets/images/eyes/eyes_20.png';
+import eyes_21 from '../assets/images/eyes/eyes_21.png';
+import eyes_22 from '../assets/images/eyes/eyes_22.png';
+import eyes_23 from '../assets/images/eyes/eyes_23.png';
+import eyes_24 from '../assets/images/eyes/eyes_24.png';
+import eyes_25 from '../assets/images/eyes/eyes_25.png';
+import eyes_26 from '../assets/images/eyes/eyes_26.png';
+import eyes_27 from '../assets/images/eyes/eyes_27.png';
+import eyes_28 from '../assets/images/eyes/eyes_28.png';
+import eyes_29 from '../assets/images/eyes/eyes_29.png';
+import eyes_30 from '../assets/images/eyes/eyes_30.png';
+import eyes_31 from '../assets/images/eyes/eyes_31.png';
+import eyes_32 from '../assets/images/eyes/eyes_32.png';
+import eyes_33 from '../assets/images/eyes/eyes_33.png';
+import eyes_34 from '../assets/images/eyes/eyes_34.png';
+import eyes_35 from '../assets/images/eyes/eyes_35.png';
+import eyes_36 from '../assets/images/eyes/eyes_36.png';
+import eyes_37 from '../assets/images/eyes/eyes_37.png';
+import eyes_38 from '../assets/images/eyes/eyes_38.png';
+import eyes_39 from '../assets/images/eyes/eyes_39.png';
 
 import mouth_0 from '../assets/images/mouths/mouth_0.png';
 import mouth_1 from '../assets/images/mouths/mouth_1.png';
@@ -407,6 +431,78 @@ export const getHatImgSrcByIndex = (index: number): string => {
 export const getEyesImgSrcByIndex = (index: number): string => {
     let imageSrc: string;
     switch (index) {
+        case 39:
+            imageSrc = eyes_39;
+            break;
+        case 38:
+            imageSrc = eyes_38;
+            break;
+        case 37:
+            imageSrc = eyes_37;
+            break;
+        case 36:
+            imageSrc = eyes_36;
+            break;
+        case 35:
+            imageSrc = eyes_35;
+            break;
+        case 34:
+            imageSrc = eyes_34;
+            break;
+        case 33:
+            imageSrc = eyes_33;
+            break;
+        case 32:
+            imageSrc = eyes_32;
+            break;
+        case 31:
+            imageSrc = eyes_31;
+            break;
+        case 30:
+            imageSrc = eyes_30;
+            break;
+        case 29:
+            imageSrc = eyes_29;
+            break;
+        case 28:
+            imageSrc = eyes_28;
+            break;
+        case 27:
+            imageSrc = eyes_27;
+            break;
+        case 26:
+            imageSrc = eyes_26;
+            break;
+        case 25:
+            imageSrc = eyes_25;
+            break;
+        case 24:
+            imageSrc = eyes_24;
+            break;
+        case 23:
+            imageSrc = eyes_23;
+            break;
+        case 22:
+            imageSrc = eyes_22;
+            break;
+        case 21:
+            imageSrc = eyes_21;
+            break;
+        case 20:
+            imageSrc = eyes_20;
+            break;
+        case 19:
+            imageSrc = eyes_19;
+            break;
+        case 18:
+            imageSrc = eyes_18;
+            break;
+        case 17:
+            imageSrc = eyes_17;
+            break;
+        case 16:
+            imageSrc = eyes_16;
+            break;
         case 15:
             imageSrc = eyes_15;
             break;

@@ -107,7 +107,7 @@ export const HomePage = (): JSX.Element => {
         const robotHatIndex = Math.floor(Math.random() * 16);
         const robotAccessoryIndex = Math.floor(Math.random() * 16);
         const robotHeadIndex = Math.floor(Math.random() * 16);
-        const robotEyesIndex = Math.floor(Math.random() * 16);
+        const robotEyesIndex = Math.floor(Math.random() * 40);
         const robotMouthIndex = Math.floor(Math.random() * 8);
         robotBackground.src = getBackgroundImgSrcByIndex(robotBackgroundIndex);
         robotNeck.src = getNeckImgSrcByIndex(robotNeckIndex);
