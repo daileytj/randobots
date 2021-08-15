@@ -103,12 +103,12 @@ export const HomePage = (): JSX.Element => {
 
         const robotBackgroundIndex = Math.floor(Math.random() * 8);
         const robotNeckIndex = Math.floor(Math.random() * 8);
-        const robotEarsIndex = Math.floor(Math.random() * 16);
-        const robotHatIndex = Math.floor(Math.random() * 16);
+        const robotEarsIndex = Math.floor(Math.random() * 32);
+        const robotHatIndex = Math.floor(Math.random() * 32);
         const robotAccessoryIndex = Math.floor(Math.random() * 16);
         const robotHeadIndex = Math.floor(Math.random() * 16);
         const robotEyesIndex = Math.floor(Math.random() * 40);
-        const robotMouthIndex = Math.floor(Math.random() * 8);
+        const robotMouthIndex = Math.floor(Math.random() * 24);
         robotBackground.src = getBackgroundImgSrcByIndex(robotBackgroundIndex);
         robotNeck.src = getNeckImgSrcByIndex(robotNeckIndex);
         robotEars.src = getEarsImgSrcByIndex(robotEarsIndex);

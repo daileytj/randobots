@@ -32,6 +32,22 @@ import ears_12 from '../assets/images/ears/ears_12.png';
 import ears_13 from '../assets/images/ears/ears_13.png';
 import ears_14 from '../assets/images/ears/ears_14.png';
 import ears_15 from '../assets/images/ears/ears_15.png';
+import ears_16 from '../assets/images/ears/ears_16.png';
+import ears_17 from '../assets/images/ears/ears_17.png';
+import ears_18 from '../assets/images/ears/ears_18.png';
+import ears_19 from '../assets/images/ears/ears_19.png';
+import ears_20 from '../assets/images/ears/ears_20.png';
+import ears_21 from '../assets/images/ears/ears_21.png';
+import ears_22 from '../assets/images/ears/ears_22.png';
+import ears_23 from '../assets/images/ears/ears_23.png';
+import ears_24 from '../assets/images/ears/ears_24.png';
+import ears_25 from '../assets/images/ears/ears_25.png';
+import ears_26 from '../assets/images/ears/ears_26.png';
+import ears_27 from '../assets/images/ears/ears_27.png';
+import ears_28 from '../assets/images/ears/ears_28.png';
+import ears_29 from '../assets/images/ears/ears_29.png';
+import ears_30 from '../assets/images/ears/ears_30.png';
+import ears_31 from '../assets/images/ears/ears_31.png';
 
 import head_0 from '../assets/images/heads/head_0.png';
 import head_1 from '../assets/images/heads/head_1.png';
@@ -83,6 +99,22 @@ import hat_12 from '../assets/images/hats/hat_12.png';
 import hat_13 from '../assets/images/hats/hat_13.png';
 import hat_14 from '../assets/images/hats/hat_14.png';
 import hat_15 from '../assets/images/hats/hat_15.png';
+import hat_16 from '../assets/images/hats/hat_16.png';
+import hat_17 from '../assets/images/hats/hat_17.png';
+import hat_18 from '../assets/images/hats/hat_18.png';
+import hat_19 from '../assets/images/hats/hat_19.png';
+import hat_20 from '../assets/images/hats/hat_20.png';
+import hat_21 from '../assets/images/hats/hat_21.png';
+import hat_22 from '../assets/images/hats/hat_22.png';
+import hat_23 from '../assets/images/hats/hat_23.png';
+import hat_24 from '../assets/images/hats/hat_24.png';
+import hat_25 from '../assets/images/hats/hat_25.png';
+import hat_26 from '../assets/images/hats/hat_26.png';
+import hat_27 from '../assets/images/hats/hat_27.png';
+import hat_28 from '../assets/images/hats/hat_28.png';
+import hat_29 from '../assets/images/hats/hat_29.png';
+import hat_30 from '../assets/images/hats/hat_30.png';
+import hat_31 from '../assets/images/hats/hat_31.png';
 
 import eyes_0 from '../assets/images/eyes/eyes_0.png';
 import eyes_1 from '../assets/images/eyes/eyes_1.png';
@@ -133,6 +165,22 @@ import mouth_4 from '../assets/images/mouths/mouth_4.png';
 import mouth_5 from '../assets/images/mouths/mouth_5.png';
 import mouth_6 from '../assets/images/mouths/mouth_6.png';
 import mouth_7 from '../assets/images/mouths/mouth_7.png';
+import mouth_8 from '../assets/images/mouths/mouth_8.png';
+import mouth_9 from '../assets/images/mouths/mouth_9.png';
+import mouth_10 from '../assets/images/mouths/mouth_10.png';
+import mouth_11 from '../assets/images/mouths/mouth_11.png';
+import mouth_12 from '../assets/images/mouths/mouth_12.png';
+import mouth_13 from '../assets/images/mouths/mouth_13.png';
+import mouth_14 from '../assets/images/mouths/mouth_14.png';
+import mouth_15 from '../assets/images/mouths/mouth_15.png';
+import mouth_16 from '../assets/images/mouths/mouth_16.png';
+import mouth_17 from '../assets/images/mouths/mouth_17.png';
+import mouth_18 from '../assets/images/mouths/mouth_18.png';
+import mouth_19 from '../assets/images/mouths/mouth_19.png';
+import mouth_20 from '../assets/images/mouths/mouth_20.png';
+import mouth_21 from '../assets/images/mouths/mouth_21.png';
+import mouth_22 from '../assets/images/mouths/mouth_22.png';
+import mouth_23 from '../assets/images/mouths/mouth_23.png';
 
 export const getBackgroundImgSrcByIndex = (index: number): string => {
     let imageSrc: string;
@@ -203,6 +251,54 @@ export const getNeckImgSrcByIndex = (index: number): string => {
 export const getEarsImgSrcByIndex = (index: number): string => {
     let imageSrc: string;
     switch (index) {
+        case 31:
+            imageSrc = ears_31;
+            break;
+        case 30:
+            imageSrc = ears_30;
+            break;
+        case 29:
+            imageSrc = ears_29;
+            break;
+        case 28:
+            imageSrc = ears_28;
+            break;
+        case 27:
+            imageSrc = ears_27;
+            break;
+        case 26:
+            imageSrc = ears_26;
+            break;
+        case 25:
+            imageSrc = ears_25;
+            break;
+        case 24:
+            imageSrc = ears_24;
+            break;
+        case 23:
+            imageSrc = ears_23;
+            break;
+        case 22:
+            imageSrc = ears_22;
+            break;
+        case 21:
+            imageSrc = ears_21;
+            break;
+        case 20:
+            imageSrc = ears_20;
+            break;
+        case 19:
+            imageSrc = ears_19;
+            break;
+        case 18:
+            imageSrc = ears_18;
+            break;
+        case 17:
+            imageSrc = ears_17;
+            break;
+        case 16:
+            imageSrc = ears_16;
+            break;
         case 15:
             imageSrc = ears_15;
             break;
@@ -374,6 +470,54 @@ export const getAccessoryImgSrcByIndex = (index: number): string => {
 export const getHatImgSrcByIndex = (index: number): string => {
     let imageSrc: string;
     switch (index) {
+        case 31:
+            imageSrc = hat_31;
+            break;
+        case 30:
+            imageSrc = hat_30;
+            break;
+        case 29:
+            imageSrc = hat_29;
+            break;
+        case 28:
+            imageSrc = hat_28;
+            break;
+        case 27:
+            imageSrc = hat_27;
+            break;
+        case 26:
+            imageSrc = hat_26;
+            break;
+        case 25:
+            imageSrc = hat_25;
+            break;
+        case 24:
+            imageSrc = hat_24;
+            break;
+        case 23:
+            imageSrc = hat_23;
+            break;
+        case 22:
+            imageSrc = hat_22;
+            break;
+        case 21:
+            imageSrc = hat_21;
+            break;
+        case 20:
+            imageSrc = hat_20;
+            break;
+        case 19:
+            imageSrc = hat_19;
+            break;
+        case 18:
+            imageSrc = hat_18;
+            break;
+        case 17:
+            imageSrc = hat_17;
+            break;
+        case 16:
+            imageSrc = hat_16;
+            break;
         case 15:
             imageSrc = hat_15;
             break;
@@ -560,6 +704,54 @@ export const getEyesImgSrcByIndex = (index: number): string => {
 export const getMouthImgSrcByIndex = (index: number): string => {
     let imageSrc: string;
     switch (index) {
+        case 23:
+            imageSrc = mouth_23;
+            break;
+        case 22:
+            imageSrc = mouth_22;
+            break;
+        case 21:
+            imageSrc = mouth_21;
+            break;
+        case 20:
+            imageSrc = mouth_20;
+            break;
+        case 19:
+            imageSrc = mouth_19;
+            break;
+        case 18:
+            imageSrc = mouth_18;
+            break;
+        case 17:
+            imageSrc = mouth_17;
+            break;
+        case 16:
+            imageSrc = mouth_16;
+            break;
+        case 15:
+            imageSrc = mouth_15;
+            break;
+        case 14:
+            imageSrc = mouth_14;
+            break;
+        case 13:
+            imageSrc = mouth_13;
+            break;
+        case 12:
+            imageSrc = mouth_12;
+            break;
+        case 11:
+            imageSrc = mouth_11;
+            break;
+        case 10:
+            imageSrc = mouth_10;
+            break;
+        case 9:
+            imageSrc = mouth_9;
+            break;
+        case 8:
+            imageSrc = mouth_8;
+            break;
         case 7:
             imageSrc = mouth_7;
             break;
