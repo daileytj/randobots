@@ -67,6 +67,49 @@ import accessory_13 from '../assets/images/accessories/accessory_13.png';
 import accessory_14 from '../assets/images/accessories/accessory_14.png';
 import accessory_15 from '../assets/images/accessories/accessory_15.png';
 
+import hat_0 from '../assets/images/hats/hat_0.png';
+import hat_1 from '../assets/images/hats/hat_1.png';
+import hat_2 from '../assets/images/hats/hat_2.png';
+import hat_3 from '../assets/images/hats/hat_3.png';
+import hat_4 from '../assets/images/hats/hat_4.png';
+import hat_5 from '../assets/images/hats/hat_5.png';
+import hat_6 from '../assets/images/hats/hat_6.png';
+import hat_7 from '../assets/images/hats/hat_7.png';
+import hat_8 from '../assets/images/hats/hat_8.png';
+import hat_9 from '../assets/images/hats/hat_9.png';
+import hat_10 from '../assets/images/hats/hat_10.png';
+import hat_11 from '../assets/images/hats/hat_11.png';
+import hat_12 from '../assets/images/hats/hat_12.png';
+import hat_13 from '../assets/images/hats/hat_13.png';
+import hat_14 from '../assets/images/hats/hat_14.png';
+import hat_15 from '../assets/images/hats/hat_15.png';
+
+import eyes_0 from '../assets/images/eyes/eyes_0.png';
+import eyes_1 from '../assets/images/eyes/eyes_1.png';
+import eyes_2 from '../assets/images/eyes/eyes_2.png';
+import eyes_3 from '../assets/images/eyes/eyes_3.png';
+import eyes_4 from '../assets/images/eyes/eyes_4.png';
+import eyes_5 from '../assets/images/eyes/eyes_5.png';
+import eyes_6 from '../assets/images/eyes/eyes_6.png';
+import eyes_7 from '../assets/images/eyes/eyes_7.png';
+import eyes_8 from '../assets/images/eyes/eyes_8.png';
+import eyes_9 from '../assets/images/eyes/eyes_9.png';
+import eyes_10 from '../assets/images/eyes/eyes_10.png';
+import eyes_11 from '../assets/images/eyes/eyes_11.png';
+import eyes_12 from '../assets/images/eyes/eyes_12.png';
+import eyes_13 from '../assets/images/eyes/eyes_13.png';
+import eyes_14 from '../assets/images/eyes/eyes_14.png';
+import eyes_15 from '../assets/images/eyes/eyes_15.png';
+
+import mouth_0 from '../assets/images/mouths/mouth_0.png';
+import mouth_1 from '../assets/images/mouths/mouth_1.png';
+import mouth_2 from '../assets/images/mouths/mouth_2.png';
+import mouth_3 from '../assets/images/mouths/mouth_3.png';
+import mouth_4 from '../assets/images/mouths/mouth_4.png';
+import mouth_5 from '../assets/images/mouths/mouth_5.png';
+import mouth_6 from '../assets/images/mouths/mouth_6.png';
+import mouth_7 from '../assets/images/mouths/mouth_7.png';
+
 export const getBackgroundImgSrcByIndex = (index: number): string => {
     let imageSrc: string;
     switch (index) {
@@ -298,6 +341,153 @@ export const getAccessoryImgSrcByIndex = (index: number): string => {
         case 0:
         default:
             imageSrc = accessory_0;
+            break;
+    }
+
+    return imageSrc;
+};
+
+export const getHatImgSrcByIndex = (index: number): string => {
+    let imageSrc: string;
+    switch (index) {
+        case 15:
+            imageSrc = hat_15;
+            break;
+        case 14:
+            imageSrc = hat_14;
+            break;
+        case 13:
+            imageSrc = hat_13;
+            break;
+        case 12:
+            imageSrc = hat_12;
+            break;
+        case 11:
+            imageSrc = hat_11;
+            break;
+        case 10:
+            imageSrc = hat_10;
+            break;
+        case 9:
+            imageSrc = hat_9;
+            break;
+        case 8:
+            imageSrc = hat_8;
+            break;
+        case 7:
+            imageSrc = hat_7;
+            break;
+        case 6:
+            imageSrc = hat_6;
+            break;
+        case 5:
+            imageSrc = hat_5;
+            break;
+        case 4:
+            imageSrc = hat_4;
+            break;
+        case 3:
+            imageSrc = hat_3;
+            break;
+        case 2:
+            imageSrc = hat_2;
+            break;
+        case 1:
+            imageSrc = hat_1;
+            break;
+        case 0:
+        default:
+            imageSrc = hat_0;
+            break;
+    }
+
+    return imageSrc;
+};
+
+export const getEyesImgSrcByIndex = (index: number): string => {
+    let imageSrc: string;
+    switch (index) {
+        case 15:
+            imageSrc = eyes_15;
+            break;
+        case 14:
+            imageSrc = eyes_14;
+            break;
+        case 13:
+            imageSrc = eyes_13;
+            break;
+        case 12:
+            imageSrc = eyes_12;
+            break;
+        case 11:
+            imageSrc = eyes_11;
+            break;
+        case 10:
+            imageSrc = eyes_10;
+            break;
+        case 9:
+            imageSrc = eyes_9;
+            break;
+        case 8:
+            imageSrc = eyes_8;
+            break;
+        case 7:
+            imageSrc = eyes_7;
+            break;
+        case 6:
+            imageSrc = eyes_6;
+            break;
+        case 5:
+            imageSrc = eyes_5;
+            break;
+        case 4:
+            imageSrc = eyes_4;
+            break;
+        case 3:
+            imageSrc = eyes_3;
+            break;
+        case 2:
+            imageSrc = eyes_2;
+            break;
+        case 1:
+            imageSrc = eyes_1;
+            break;
+        case 0:
+        default:
+            imageSrc = eyes_0;
+            break;
+    }
+
+    return imageSrc;
+};
+
+export const getMouthImgSrcByIndex = (index: number): string => {
+    let imageSrc: string;
+    switch (index) {
+        case 7:
+            imageSrc = mouth_7;
+            break;
+        case 6:
+            imageSrc = mouth_6;
+            break;
+        case 5:
+            imageSrc = mouth_5;
+            break;
+        case 4:
+            imageSrc = mouth_4;
+            break;
+        case 3:
+            imageSrc = mouth_3;
+            break;
+        case 2:
+            imageSrc = mouth_2;
+            break;
+        case 1:
+            imageSrc = mouth_1;
+            break;
+        case 0:
+        default:
+            imageSrc = mouth_0;
             break;
     }
 

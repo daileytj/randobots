@@ -20,6 +20,9 @@ import {
     getHeadImgSrcByIndex,
     getEarsImgSrcByIndex,
     getAccessoryImgSrcByIndex,
+    getEyesImgSrcByIndex,
+    getHatImgSrcByIndex,
+    getMouthImgSrcByIndex,
 } from '../utils/imageUtils';
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -60,7 +63,10 @@ export const HomePage = (): JSX.Element => {
     const robotBackground = new Image();
     const robotNeck = new Image();
     const robotEars = new Image();
+    const robotHat = new Image();
     const robotHead = new Image();
+    const robotEyes = new Image();
+    const robotMouth = new Image();
     const robotAccessory = new Image();
 
     useEffect((): void => {
@@ -77,7 +83,10 @@ export const HomePage = (): JSX.Element => {
             ctx.drawImage(robotBackground, 0, 0);
             ctx.drawImage(robotNeck, 0, 0);
             ctx.drawImage(robotEars, 0, 0);
+            ctx.drawImage(robotHat, 0, 0);
             ctx.drawImage(robotHead, 0, 0);
+            ctx.drawImage(robotEyes, 0, 0);
+            ctx.drawImage(robotMouth, 0, 0);
             ctx.drawImage(robotAccessory, 0, 0);
         }
     };
@@ -86,18 +95,27 @@ export const HomePage = (): JSX.Element => {
         let robotBackgroundLoaded = false;
         let robotNeckLoaded = false;
         let robotEarsLoaded = false;
+        let robotHatLoaded = false;
         let robotHeadLoaded = false;
+        let robotEyesLoaded = false;
+        let robotMouthLoaded = false;
         let robotAccessoryLoaded = false;
 
         const robotBackgroundIndex = Math.floor(Math.random() * 8);
         const robotNeckIndex = Math.floor(Math.random() * 8);
         const robotEarsIndex = Math.floor(Math.random() * 16);
+        const robotHatIndex = Math.floor(Math.random() * 16);
         const robotHeadIndex = Math.floor(Math.random() * 16);
+        const robotEyesIndex = Math.floor(Math.random() * 16);
+        const robotMouthIndex = Math.floor(Math.random() * 8);
         const robotAccessoryIndex = Math.floor(Math.random() * 16);
         robotBackground.src = getBackgroundImgSrcByIndex(robotBackgroundIndex);
         robotNeck.src = getNeckImgSrcByIndex(robotNeckIndex);
         robotEars.src = getEarsImgSrcByIndex(robotEarsIndex);
+        robotHat.src = getHatImgSrcByIndex(robotHatIndex);
         robotHead.src = getHeadImgSrcByIndex(robotHeadIndex);
+        robotEyes.src = getEyesImgSrcByIndex(robotEyesIndex);
+        robotMouth.src = getMouthImgSrcByIndex(robotMouthIndex);
         robotAccessory.src = getAccessoryImgSrcByIndex(robotAccessoryIndex);
 
         const checkIfAllAssetsLoaded = (): void => {
@@ -105,7 +123,10 @@ export const HomePage = (): JSX.Element => {
                 robotBackgroundLoaded &&
                 robotNeckLoaded &&
                 robotEarsLoaded &&
+                robotHatLoaded &&
                 robotHeadLoaded &&
+                robotEyesLoaded &&
+                robotMouthLoaded &&
                 robotAccessoryLoaded
             ) {
                 drawRandoBot();
@@ -127,8 +148,23 @@ export const HomePage = (): JSX.Element => {
             checkIfAllAssetsLoaded();
         };
 
+        robotHat.onload = function () {
+            robotHatLoaded = true;
+            checkIfAllAssetsLoaded();
+        };
+
         robotHead.onload = function () {
             robotHeadLoaded = true;
+            checkIfAllAssetsLoaded();
+        };
+
+        robotEyes.onload = function () {
+            robotEyesLoaded = true;
+            checkIfAllAssetsLoaded();
+        };
+
+        robotMouth.onload = function () {
+            robotMouthLoaded = true;
             checkIfAllAssetsLoaded();
         };
 
