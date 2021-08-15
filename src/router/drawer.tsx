@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import { useMediaQuery, useTheme } from '@material-ui/core';
 import { useHistory, useLocation } from 'react-router';
 import { useDrawer } from '../contexts/drawerContextProvider';
@@ -13,6 +13,10 @@ export const NavigationDrawer: React.FC = () => {
     const location = useLocation();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     const [selected, setSelected] = useState(location.pathname);
+
+    useEffect(() => {
+        setSelected(location.pathname);
+    }, [location]);
 
     const navigate = useCallback(
         (id: string): void => {
@@ -32,10 +36,11 @@ export const NavigationDrawer: React.FC = () => {
             }}
             variant={isMobile ? 'temporary' : 'persistent'}
             activeItem={selected}
+            width={300}
+            openOnHover={false}
         >
             <DrawerHeader
-                title={'PX Blue'}
-                subtitle={'React Project'}
+                title={'RandoBots'}
                 icon={<Menu />}
                 onIconClick={(): void => {
                     setDrawerOpen(!drawerOpen);
