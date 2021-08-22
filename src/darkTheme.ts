@@ -44,14 +44,14 @@ export const createSimpleLightPalette = (color: PXBlueColor): SimplePaletteColor
 });
 
 export const createSimpleDarkPalette = (color: PXBlueColor): SimplePaletteColorOptions => ({
-    light: color[50],
-    main: color[200],
-    dark: color[500],
+    light: color[200],
+    main: color[400],
+    dark: color[700],
 });
 
 const ThemeColors = {
-    primary: createSimpleDarkPalette(PXBColors.purple),
-    secondary: createSimpleDarkPalette(PXBColors.green),
+    primary: createSimpleDarkPalette(PXBColors.green),
+    secondary: createSimpleDarkPalette(PXBColors.purple),
     error: createSimpleDarkPalette(PXBColors.red),
     success: createSimpleDarkPalette(PXBColors.green),
     info: createSimpleDarkPalette(PXBColors.green),
@@ -226,7 +226,7 @@ export const randoBotsDarkTheme: ThemeOptions = {
                 backgroundColor: ThemeColors.primary.dark,
                 color: WhiteText,
                 '&:hover': {
-                    backgroundColor: PXBColors.blue[300],
+                    backgroundColor: PXBColors.green[300],
                 },
                 '&$disabled': {
                     borderWidth: 0,
@@ -324,7 +324,7 @@ export const randoBotsDarkTheme: ThemeOptions = {
             },
             clickableColorPrimary: {
                 '&:hover': {
-                    backgroundColor: PXBColors.blue[300],
+                    backgroundColor: PXBColors.green[300],
                 },
             },
             clickableColorSecondary: {
@@ -343,7 +343,7 @@ export const randoBotsDarkTheme: ThemeOptions = {
                 },
             },
             deleteIconColorPrimary: {
-                color: PXBColors.blue[100],
+                color: PXBColors.green[100],
                 '&:hover': {
                     color: WhiteText,
                 },
@@ -355,7 +355,7 @@ export const randoBotsDarkTheme: ThemeOptions = {
                 },
             },
             deleteIconOutlinedColorPrimary: {
-                color: PXBColors.blue[400],
+                color: PXBColors.green[400],
                 '&:hover': {
                     color: ThemeColors.primary.main,
                 },
@@ -370,7 +370,7 @@ export const randoBotsDarkTheme: ThemeOptions = {
                 color: WhiteText,
                 backgroundColor: ThemeColors.primary.dark,
                 '&$clickable:hover': {
-                    backgroundColor: PXBColors.blue[300],
+                    backgroundColor: PXBColors.green[300],
                 },
             },
             colorSecondary: {
@@ -392,11 +392,11 @@ export const randoBotsDarkTheme: ThemeOptions = {
                     marginRight: -4,
                 },
                 '& $avatarColorPrimary': {
-                    backgroundColor: PXBColors.blue[100],
+                    backgroundColor: PXBColors.green[100],
                     color: ThemeColors.primary.dark,
                 },
                 '& $avatarColorSecondary': {
-                    backgroundColor: PXBColors.blue[100],
+                    backgroundColor: PXBColors.green[100],
                     color: ThemeColors.primary.dark,
                 },
                 '& $icon': {
@@ -460,7 +460,7 @@ export const randoBotsDarkTheme: ThemeOptions = {
                 backgroundColor: ThemeColors.primary.dark,
                 color: WhiteText,
                 '&:hover': {
-                    backgroundColor: PXBColors.blue[300],
+                    backgroundColor: PXBColors.green[300],
                 },
             },
             secondary: {
@@ -533,7 +533,7 @@ export const randoBotsDarkTheme: ThemeOptions = {
         MuiSlider: {
             root: {
                 height: 6,
-                color: PXBColors.blue[300],
+                color: PXBColors.green[300],
             },
             colorSecondary: {
                 color: PXBColors.lightBlue[300],

@@ -13,7 +13,7 @@ import {
     Button,
 } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
-import DownloadIcon from '@material-ui/icons/CloudDownload'
+import DownloadIcon from '@material-ui/icons/CloudDownload';
 import { useDrawer } from '../contexts/drawerContextProvider';
 import {
     getBackgroundImgSrcByIndex,
@@ -25,6 +25,8 @@ import {
     getHatImgSrcByIndex,
     getMouthImgSrcByIndex,
 } from '../utils/imageUtils';
+import { Spacer } from '@pxblue/react-components';
+import { MetamaskIconButton } from '../components/MetamaskIconButton';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -180,9 +182,9 @@ export const RandoBotGeneratorPage = (): JSX.Element => {
         const randobotCanvas = document.getElementById('canvas') as HTMLCanvasElement;
         const link = document.createElement('a');
         link.download = 'randobot.png';
-        link.href = randobotCanvas.toDataURL("image/png");
+        link.href = randobotCanvas.toDataURL('image/png');
         link.click();
-    }
+    };
 
     return (
         <div className={classes.pageBackground}>
@@ -203,18 +205,32 @@ export const RandoBotGeneratorPage = (): JSX.Element => {
                     <Typography variant={'h6'} color={'inherit'}>
                         RandoBot Generator
                     </Typography>
+                    <Spacer />
+                    <MetamaskIconButton />
                 </Toolbar>
             </AppBar>
             <div className={classes.body}>
                 <div style={{ maxWidth: 600, margin: '0 auto', display: 'flex', flexDirection: 'column' }}>
                     <canvas id={'canvas'} className={classes.canvas}></canvas>
-                    <div style={{display: 'flex', flexDirection: 'row'}}>
-                    <Button style={{flex: 1}} variant={'contained'} color={'primary'} onClick={(): void => generateRandoBot()}>
-                        Generate RandoBot
-                    </Button>
-                    {isAdmin && (<Button style={{marginLeft: 16}} variant={'contained'} color={'primary'} onClick={(): void => downloadRobotPNG()}>
-                        <DownloadIcon />
-                    </Button>)}
+                    <div style={{ display: 'flex', flexDirection: 'row' }}>
+                        <Button
+                            style={{ flex: 1 }}
+                            variant={'contained'}
+                            color={'primary'}
+                            onClick={(): void => generateRandoBot()}
+                        >
+                            Generate RandoBot
+                        </Button>
+                        {isAdmin && (
+                            <Button
+                                style={{ marginLeft: 16 }}
+                                variant={'contained'}
+                                color={'primary'}
+                                onClick={(): void => downloadRobotPNG()}
+                            >
+                                <DownloadIcon />
+                            </Button>
+                        )}
                     </div>
                 </div>
             </div>
