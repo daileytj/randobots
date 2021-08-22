@@ -8,7 +8,7 @@ export const MainRouter = (): JSX.Element => (
             <Route key={`route_${page.route}`} exact path={`${page.route}`} component={page.component} />
         ))}
         <Route path={'*'}>
-            <Redirect to={'/'} />
+            <Redirect to={'/randobots'} />
         </Route>
     </Switch>
 );
