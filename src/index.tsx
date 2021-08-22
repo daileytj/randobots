@@ -10,8 +10,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { CssBaseline, ThemeProvider, createMuiTheme } from '@material-ui/core';
 import { BrowserRouter } from 'react-router-dom';
-import * as PXBThemes from '@pxblue/react-themes';
-// import * as darkTheme from './darkTheme';
+// import * as PXBThemes from '@pxblue/react-themes';
+import { randoBotsDarkTheme } from './darkTheme';
 import '@pxblue/react-themes/open-sans';
 import { App } from './App';
 import reportWebVitals from './reportWebVitals';
@@ -19,7 +19,7 @@ import './index.css';
 
 ReactDOM.render(
     // <React.StrictMode>
-    <ThemeProvider theme={createMuiTheme(PXBThemes.blueDark)}>
+    <ThemeProvider theme={createMuiTheme(randoBotsDarkTheme)}>
         <BrowserRouter>
             <CssBaseline />
             <App />

@@ -15,6 +15,8 @@ import {
 import MenuIcon from '@material-ui/icons/Menu';
 import { useDrawer } from '../contexts/drawerContextProvider';
 import { useHistory } from 'react-router';
+import { Spacer } from '@pxblue/react-components';
+import { MetamaskIconButton } from '../components/MetamaskIconButton';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -66,6 +68,8 @@ export const HomePage = (): JSX.Element => {
                     <Typography variant={'h6'} color={'inherit'}>
                         RandoBots
                     </Typography>
+                    <Spacer />
+                    <MetamaskIconButton />
                 </Toolbar>
             </AppBar>
             <div className={classes.body}>
@@ -80,10 +84,10 @@ export const HomePage = (): JSX.Element => {
                         color={'primary'}
                         style={{ marginTop: 16 }}
                         onClick={(): void => {
-                            history.push('/randobots/generator');
+                            history.push('randobots/generator');
                         }}
                     >
-                        Go To RandoBot Generator
+                        RandoBot Generator
                     </Button>
                 </div>
             </div>
