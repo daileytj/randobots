@@ -80,7 +80,7 @@ export const HomePage = (): JSX.Element => {
                         color={'primary'}
                         style={{ marginTop: 16 }}
                         onClick={(): void => {
-                            history.push('/rando-bot-generator');
+                            history.push('/randobots/generator');
                         }}
                     >
                         Go To RandoBot Generator
