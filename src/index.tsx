@@ -20,7 +20,7 @@ import './index.css';
 ReactDOM.render(
     // <React.StrictMode>
     <ThemeProvider theme={createMuiTheme(PXBThemes.blueDark)}>
-        <BrowserRouter>
+        <BrowserRouter >
             <CssBaseline />
             <App />
         </BrowserRouter>

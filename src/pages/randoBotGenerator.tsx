@@ -13,6 +13,7 @@ import {
     Button,
 } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
+import DownloadIcon from '@material-ui/icons/CloudDownload'
 import { useDrawer } from '../contexts/drawerContextProvider';
 import {
     getBackgroundImgSrcByIndex,
@@ -58,6 +59,7 @@ const useStyles = makeStyles((theme: Theme) =>
 export const RandoBotGeneratorPage = (): JSX.Element => {
     const theme = useTheme();
     const classes = useStyles(theme);
+    const isAdmin: boolean = localStorage.getItem('isAdmin') === 'true';
     const { setDrawerOpen } = useDrawer();
     // const xs = useMediaQuery(theme.breakpoints.down('xs'));
     const robotBackground = new Image();
@@ -174,6 +176,14 @@ export const RandoBotGeneratorPage = (): JSX.Element => {
         };
     };
 
+    const downloadRobotPNG = (): void => {
+        const randobotCanvas = document.getElementById('canvas') as HTMLCanvasElement;
+        const link = document.createElement('a');
+        link.download = 'randobot.png';
+        link.href = randobotCanvas.toDataURL("image/png");
+        link.click();
+    }
+
     return (
         <div className={classes.pageBackground}>
             <AppBar position={'sticky'} color={'secondary'}>
@@ -198,9 +208,14 @@ export const RandoBotGeneratorPage = (): JSX.Element => {
             <div className={classes.body}>
                 <div style={{ maxWidth: 600, margin: '0 auto', display: 'flex', flexDirection: 'column' }}>
                     <canvas id={'canvas'} className={classes.canvas}></canvas>
-                    <Button variant={'contained'} color={'primary'} onClick={(): void => generateRandoBot()}>
+                    <div style={{display: 'flex', flexDirection: 'row'}}>
+                    <Button style={{flex: 1}} variant={'contained'} color={'primary'} onClick={(): void => generateRandoBot()}>
                         Generate RandoBot
                     </Button>
+                    {isAdmin && (<Button style={{marginLeft: 16}} variant={'contained'} color={'primary'} onClick={(): void => downloadRobotPNG()}>
+                        <DownloadIcon />
+                    </Button>)}
+                    </div>
                 </div>
             </div>
         </div>
