@@ -11,6 +11,7 @@ import {
     /*useMediaQuery,*/
     useTheme,
     Button,
+    Divider,
 } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import DownloadIcon from '@material-ui/icons/CloudDownload';
@@ -38,8 +39,8 @@ const useStyles = makeStyles((theme: Theme) =>
         body: {
             minHeight: `calc(100vh - ${theme.spacing(8)}px)`,
             display: 'flex',
+            flexDirection: 'column',
             alignItems: 'center',
-            justifyContent: 'center',
             padding: `${theme.spacing(3)}px`,
             [theme.breakpoints.down('xs')]: {
                 minHeight: `calc(100vh - ${theme.spacing(7)}px)`,
@@ -55,6 +56,7 @@ const useStyles = makeStyles((theme: Theme) =>
             border: '2px solid #000',
             marginBottom: '1rem',
         },
+        description: {},
     })
 );
 
@@ -210,6 +212,21 @@ export const RandoBotGeneratorPage = (): JSX.Element => {
                 </Toolbar>
             </AppBar>
             <div className={classes.body}>
+                <div className={classes.description}>
+                    <Typography variant={'h6'} style={{ marginBottom: 16 }}>
+                        Coming Soon!
+                    </Typography>
+                    <Typography variant={'body1'} style={{ marginBottom: 8 }}>
+                        You'll soon be able to mint a <strong>Randobot</strong> of your choosing. Simply generate a new{' '}
+                        <strong>Randobot</strong> below, connect your metamask wallet, and mint your favorite variation
+                        with the click of a button that is not yet visible on this page. With 16,106,127,360 variations,
+                        you're bound to stumble across one you just have to have.
+                    </Typography>
+                    <Typography variant={'body1'} style={{ marginBottom: 40 }}>
+                        In the meantime, enjoy testing out the <strong>Randobot</strong> generator!
+                    </Typography>
+                    <Divider variant={'fullWidth'} style={{ marginBottom: 32 }} />
+                </div>
                 <div style={{ maxWidth: 600, margin: '0 auto', display: 'flex', flexDirection: 'column' }}>
                     <canvas id={'canvas'} className={classes.canvas}></canvas>
                     <div style={{ display: 'flex', flexDirection: 'row' }}>
